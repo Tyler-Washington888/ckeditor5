@@ -24,6 +24,7 @@ install:
 script:
 - git clone https://github.com/ckeditor/ckeditor5-dev.git --branch ck/10982 && cd ckeditor5-dev && yarn && cd packages/ckeditor5-dev-tests && yarn link && cd ../../../
 - yarn link @ckeditor/ckeditor5-dev-tests
+- yarn run dll:build
 - sh ./scripts/check-manual-tests.sh -r ckeditor5 -f ckeditor5
 #- ./scripts/ci/travis-check.js
 #- if [[ $TRAVIS_JOB_TYPE == "Tests" && $TRAVIS_TEST_RESULT -eq 0 ]]; then ./scripts/ci/trigger-ckeditor5-continuous-integration.sh; fi
