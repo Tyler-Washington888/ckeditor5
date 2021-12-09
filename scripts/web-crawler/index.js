@@ -96,6 +96,7 @@ function parseArguments( args ) {
 		depth: options.depth ? Number( options.depth ) : Infinity,
 		exclusions: options.exclusions ? toArray( options.exclusions ).filter( exclusion => exclusion.length > 0 ) : [],
 		concurrency: options.concurrency ? Number( options.concurrency ) : 1,
-		quit: Boolean( options.quit )
+		quit: Boolean( options.quit ),
+		noSpinner: true
 	};
 }
